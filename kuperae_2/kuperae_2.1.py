@@ -6,4 +6,3 @@ diagonal_square = side_square * (2 ** 0.5)
 print('Периметр квадрата равен:', perimeter_square,
       '\nПлощадь квадрата равна:', area_square,
       '\nДиагональ квадрата равна:', diagonal_square)
-
