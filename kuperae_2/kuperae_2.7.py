@@ -8,8 +8,8 @@ t = second_string.find(first_string[1])
 f = second_string.find(first_string[2])
 
 # Найдем минимальный и максимальный индекс
-start = min (w, t, f )
-stop = max (w, t, f )
+start = min(w, t, f)
+stop = max(w, t, f)
 
 # Сделаем срез по минимальному и максимальному индексу
 result = second_string[start:stop + 1]
