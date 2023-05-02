@@ -1,4 +1,5 @@
-side_square = 72
+# Дана сторона квадрата, найдем его периметр, площадь и диагональ
+side_square = 7
 
 perimeter_square = 4 * side_square
 area_square = side_square ** 2
