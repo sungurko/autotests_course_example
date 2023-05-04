@@ -1,9 +1,8 @@
 # Дан абсолютный путь до файла
-a = 'C:\\Users\\kuperae\Desktop\pythonProject_course\kuperae_2\kuperae_2.4.py'
-
+a = r'C:\Program Files\Common Files\microsoft shared\EQUATION\EQNEDT32.EXE'
 # Найдем название диска, корневой папки и файла без расширения
 file_name = a.split('\\')[-1][:-3]
-disc_name = a[0]
+disc_name = a.split('\\')[0].rstrip(':')
 folder_name = a.split('\\')[1]
 
 # Выведем на печать результаты
