@@ -1,7 +1,7 @@
 # Дан абсолютный путь до файла
 a = r'C:\Program Files\Common Files\microsoft shared\EQUATION\EQNEDT32.EXE'
 # Найдем название диска, корневой папки и файла без расширения
-file_name = a.split('\\')[-1][:-3]
+file_name = a.split('\\')[-1].split('.')[0]
 disc_name = a.split('\\')[0].rstrip(':')
 folder_name = a.split('\\')[1]
 
