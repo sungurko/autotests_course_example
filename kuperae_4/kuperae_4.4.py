@@ -17,7 +17,6 @@ def multiplication_chain(num):
             num = start_mul
     return count_multy
 
-
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
