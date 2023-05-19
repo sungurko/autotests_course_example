@@ -19,7 +19,17 @@
 
 
 def everything_for_your_cat(cats_data):
-    # Здесь нужно написать код
+    our_str = ''
+    sort_dict = {}
+    for item in cats_data:
+        pokupatel = item[2] + ' ' + item[3]
+        cat = item[0] + ", " + str(item[1])
+        if pokupatel in sort_dict:
+            sort_dict[pokupatel].append(cat)
+        else:
+            sort_dict[pokupatel] = [cat]
+    for key, value in sort_dict.items():
+        our_str += key + ': ' + '; '.join(value) + '\n'
     return our_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
