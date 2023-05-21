@@ -7,7 +7,13 @@
 
 
 def repeats(our_str):
-    # Здесь нужно написать код
+    temp_list = []
+    new_str = ''
+    for item in our_str:
+        temp_list.append(item)
+        repeat_value = temp_list.count(item)
+        postfix_n = item + '_' + str(repeat_value)
+        new_str += postfix_n
     return new_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
