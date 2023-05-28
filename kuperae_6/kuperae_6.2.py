@@ -15,5 +15,6 @@ def global_function():
     return msg
 
 
+
 assert global_function() == 2, 'Значение переменной msg должно быть равно 2'
 print('Все ок')
