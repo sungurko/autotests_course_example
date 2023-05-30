@@ -30,6 +30,7 @@ class Trigon:
         else:
             self.args = args
 
+
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 

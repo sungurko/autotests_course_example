@@ -16,7 +16,6 @@
 
 import unittest  # Не удалять
 
-
 def treatment_sum(tup):
     """
     Возвращает сумму элементов кортежа
