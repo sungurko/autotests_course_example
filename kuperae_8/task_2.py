@@ -22,7 +22,7 @@ class Trigon:
             raise TypeError("Стороны должны быть числами")
         elif len(args) < 3:
             raise IndexError(f"Передано {len(args)} аргументов, а ожидается 3")
-        elif len([str(i) for i in args if str(i) >= '0']) != len(args):
+        elif len([int(i) for i in args if int(i) > 0]) != len(args):
             raise ValueError("Стороны должны быть положительными")
         elif not args[0] + int(args[1]) > args[2] and args[1] + args[2] > args[0] \
                 and args[0] + args[2] < args[1]:
