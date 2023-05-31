@@ -9,7 +9,30 @@
 # Segment((-2, -3), (4, 5)).x_axis_intersection() --> True
 # Segment((-2, -3), (4, -5)).y_axis_intersection() --> False
 
-# Здесь пишем код
+class Segment:
+    def __init__(self, tup1, tup2):
+        self.x1 = tup1[0]
+        self.x2 = tup2[0]
+        self.y1 = tup1[1]
+        self.y2 = tup2[1]
+
+    def length(self):
+        """Возвращает длину отрезка, с округлением до 2 знаков после запятой
+        :return: float
+        """
+        return round(((self.x1 - self.x2) ** 2 + (self.y1 - self.y2) ** 2) ** 0.5, 2)
+
+    def x_axis_intersection(self):
+        """Возвращает True, если отрезок пересекает ось абцисс
+        :return: bool
+        """
+        return self.y2 >= 0
+
+    def y_axis_intersection(self):
+        """Возвращает True, если отрезок пересекает ось ординат
+        :return: bool
+        """
+        return self.x1 <= 0
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

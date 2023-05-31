@@ -22,6 +22,35 @@
 # 1337*32*9 = 385056
 
 # Здесь пишем код
+class PersonInfo:
+
+    def __init__(self, name, age, *args):
+        self.name = name
+        self.age = age
+        self.args = args
+
+    def short_name(self):
+        """Возвращает строку с именем сотрудника в формате Фамилия И.
+        :return: str
+        """
+        return self.name.split(' ')[1] + \
+            ' ' + self.name.split(' ')[0][:1] + '.'
+
+    def path_deps(self):
+        """Возвращает путь в формате "Головное подразделение --> ... --> Конечное подразделение"
+        :return: str
+        """
+        return ' --> '.join(list(self.args))
+
+    def new_salary(self):
+        """Возвращает произведение, вычисляемое по формуле:
+        1337*Возраст age * суммарное кол-во вхождений трех
+        наиболее часто встречающихся букв из списка подразделений
+        :return: int
+        """
+        deps = ''.join(self.args)
+        letter_count = sorted([(deps.count(item)) for item in set(deps)])
+        return 1337 * self.age * sum(letter_count[-3:])
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
