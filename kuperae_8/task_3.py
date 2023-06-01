@@ -7,7 +7,18 @@
 # Если исключения не произошло, то функция возвращает сумму всех координат
 
 
-# Здесь пишем код
+def segment(tup1, tup2):
+    """
+    Возвращает сумму элементов кортежей tup1 и tup2
+    :param tup1: tuple
+    :param tup2: tuple
+    :return:
+    """
+    try:
+        return tup1[0] + tup1[1] + tup2[0] + tup2[1]
+    except Exception as e:
+        return e.args[0][::-1]
+
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

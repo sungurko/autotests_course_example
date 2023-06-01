@@ -16,7 +16,25 @@
 
 import unittest  # Не удалять
 
-# Здесь пишем код
+def treatment_sum(tup):
+    """
+    Возвращает сумму элементов кортежа
+    (элементов должно быть не менее и не более 2)
+    :param tup: tuple
+    :return: int, str
+    """
+    try:
+        if len(tup) < 2:
+            raise IndexError('Недостаточно данных')
+        elif len(tup) > 2:
+            raise Exception('Много данных')
+        else:
+            return tup[0] + tup[1]
+    except TypeError:
+        return 'Нельзя сложить эти данные'
+    except IndexError as e:
+        return e.args[0]
+
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

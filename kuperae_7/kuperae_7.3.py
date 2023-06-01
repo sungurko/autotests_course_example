@@ -25,6 +25,59 @@
 
 # Здесь пишем код
 
+class PublicTransport:
+    def __init__(self, brand, _engine_power, year, color, max_speed):
+        self.brand = brand
+        self._engine_power = _engine_power
+        self.year = year
+        self.color = color
+        self.max_speed = max_speed
+
+    @property
+    def info(self):
+        return (f'Марка автобуса: {self.brand} \n Цвет: {self.color} \n'
+                f'Год выпуска: {self.year} \n Мощность двигателя: {self._engine_power}')
+
+
+class Bus(PublicTransport):
+
+    def __init__(self, brand, _engine_power, year, color, max_speed, passengers, __park, _fare):
+        super().__init__(brand, _engine_power, year, color, max_speed)
+        self.passengers = passengers
+        self.__park = __park
+        self._fare = _fare
+
+    @property
+    def park(self):
+        """
+        Cвойство, которое будет возвращать значение park, а при присвоении
+        проверять номер парка, что он в диапазоне от 1000 до 9999
+        :return:
+        """
+        return self.__park
+
+    @park.setter
+    def park(self, park):
+        assert 1000 <= park <= 9999
+        self.__park = park
+
+
+class Tram(PublicTransport):
+
+    def __init__(self, brand, _engine_power, year, color, max_speed, __route, path, _fare):
+        super().__init__(brand, _engine_power, year, color, max_speed)
+        self.__route = __route
+        self.path = path
+        self._fare = _fare
+
+    @property
+    def how_long(self):
+        """Свойство, которое вычисляет время на прохождение
+        маршрута по формуле max_speed/(4*path)
+        :return: float
+        """
+        return self.max_speed / (4 * self.path)
+
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 transport = PublicTransport('Автомобиль', 500, 2040, 'Фиолетовый', 300)
