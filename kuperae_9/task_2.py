@@ -35,7 +35,6 @@ import datetime
 import time
 
 
-# Здесь пишем код
 def func_log(file_log='log.txt'):
     def log(func):
         def wrapper():
@@ -63,3 +62,4 @@ func2()
 func1()
 
 help(func1)
+
