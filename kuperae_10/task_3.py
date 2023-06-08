@@ -17,4 +17,3 @@ def all_division(*arg1):
     pytest.param(10, 0, 0, marks=pytest.mark.skip('Иногда можно делить но 0'))])
 def test_division(a, b, result):
     assert all_division(a, b) == result
-
