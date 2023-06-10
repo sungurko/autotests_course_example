@@ -3,7 +3,10 @@
 # Необходимо удалить все цифры и записать получившийся текст в файл test_file/task1_answer.txt
 
 
-# Здесь пишем код
+with open(r'.\test_file\task1_data.txt', 'r', encoding='utf-8') as file:
+    new_data = ''.join([i for i in file.read() if not i.isdigit()])
+    with open(r'test_file\task1_answer.txt', 'w', encoding='utf-8') as new_file:
+        new_file.writelines(new_data)
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
