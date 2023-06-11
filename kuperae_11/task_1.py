@@ -42,3 +42,4 @@ try:
     sleep(2)
 finally:
     driver.quit()
+    
