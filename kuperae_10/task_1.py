@@ -16,4 +16,17 @@
 import random
 
 
-# Здесь пишем код
+def generate_random_name(start):
+    letters = 'abcdefghijklmnopqrstuvwxyz'
+    while start > 0:
+        letter = ''.join([random.choice(letters) for _ in range(random.randint(1, 16))])
+        letter1 = ''.join([random.choice(letters) for _ in range(random.randint(1, 16))])
+        yield f'{letter} {letter1}'
+        start -= 1
+
+
+word = generate_random_name(4)
+print(next(word))
+print(next(word))
+print(next(word))
+print(next(word))
